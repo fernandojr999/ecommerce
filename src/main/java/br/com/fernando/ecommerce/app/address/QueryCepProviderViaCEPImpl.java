@@ -1,13 +1,13 @@
 package br.com.fernando.ecommerce.app.address;
 
 import br.com.fernando.ecommerce.core.address.cep.CepDTO;
-import br.com.fernando.ecommerce.core.address.cep.QueryCepProvider;
+import br.com.fernando.ecommerce.core.address.cep.provider.QueryCepProviderViaCEP;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class QueryCepProviderImplementation implements QueryCepProvider {
+public class QueryCepProviderViaCEPImpl implements QueryCepProviderViaCEP {
     private RestTemplate restTemplate = new RestTemplate();
 
     private final String URL_TEMPLATE = "https://viacep.com.br/ws/%s/json/";
