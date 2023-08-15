@@ -19,3 +19,8 @@ Foi adotado também uma arquitetura voltada para Domínios (DDD), dessa forma co
 ### Desenvolvimento
 Para o desenvolvimento foi utilizado o desenvolvimento dirigido por testes (TDD), no qual consiste em criar um caso de teste primeiro e a partir dele criar as implementações de negócio.
 
+- Testes: para os testes foram utilizados o JUnit e o SpringBootTest
+- Consulta de CEP: para a consulta de CEPs foi criado duas estratégias dentro do módulo App (Postmon e ViaCEP), a escolha entre uma estratégia ou outra é feito através do arquivo .properties, que através de uma Factory consegue retornar a consulta de qualquer um dos dois provedores.
+
+
+
