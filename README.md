@@ -22,5 +22,18 @@ Para o desenvolvimento foi utilizado o desenvolvimento dirigido por testes (TDD)
 - Testes: para os testes foram utilizados o JUnit e o SpringBootTest
 - Consulta de CEP: para a consulta de CEPs foi criado duas estratégias dentro do módulo App (Postmon e ViaCEP), a escolha entre uma estratégia ou outra é feito através do arquivo .properties, que através de uma Factory consegue retornar a consulta de qualquer um dos dois provedores.
 
+### Como executar
+Você pode executar o projeto através do IntelliJ Community, ao abrir o projeto é possível iniciar a execução dos testes. Os testes estão dentro do projeto e executam de forma independente, pois a base de dados h2 é criada em tempo de execução.
+
+Para executar a aplicação é necessário configurar o projeto através do arquivo application.properties. O arquivo já está configurado para uma conexão MySQL em localhost com usuário root e senha vazia, essas propriedades podem ser alteradas de acordo com as suas configurações do MySQL.
+
+A última propriedade do arquivo é de escolha do provedor de CEP, e ela pode ser configurada da seguinte forma:
+
+app.config.cep-provider=VIACEP
+
+ou 
+
+app.config.cep-provider=POSTMON
+
 
 
